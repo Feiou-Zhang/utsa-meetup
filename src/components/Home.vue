@@ -20,7 +20,7 @@
     </v-layout>
     <v-layout row wrap class="mt-2" v-if="!loading">
       <v-flex xs12>
-        <v-carousel style="cursor: pointer;">
+        <v-carousel :hide-controls="true" style="cursor: pointer;">
           <v-carousel-item
             v-for="meetup in meetups"
             :src="meetup.imageUrl"
@@ -68,4 +68,5 @@
     font-size: 2em;
     padding: 20px;
   }
-</style>
+  .v-carousel .carousel_controls { display: none; }
+</style>_
