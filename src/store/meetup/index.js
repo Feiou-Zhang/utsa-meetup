@@ -6,18 +6,26 @@ export default {
       {
         imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/4/47/New_york_times_square-terabass.jpg',
         id: 'afajfjadfaadfa323',
-        title: 'Meetup in New York',
+        title: 'Let\'s go to New York',
         date: new Date(),
         location: 'New York',
-        description: 'New York, New York!'
+        description: 'Let\'s go to New York to celebrate the New Year Eve, stay there 3-4 night, enjoy some great food.'
       },
       {
-        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/7/7a/Paris_-_Blick_vom_gro%C3%9Fen_Triumphbogen.jpg',
+        imageUrl: 'https://firebasestorage.googleapis.com/v0/b/one-utsa.appspot.com/o/meetups%2F-Kv9GKyS_vtKJvsif68T..jpg?alt=media&token=504fc9bd-c2da-451a-85d1-2f78967a97a9',
         id: 'aadsfhbkhlk1241',
-        title: 'Meetup in Paris',
+        title: 'Really want to go to Paris(Girls Only)',
         date: new Date(),
         location: 'Paris',
-        description: 'It\'s Paris!'
+        description: 'aris is my dream place to go, anyone want to spend some great time in Paris during this comming winter break? Plan to stay for about a week.'
+      },
+      {
+        imageUrl: 'https://firebasestorage.googleapis.com/v0/b/one-utsa.appspot.com/o/meetups%2F-Kv9HNGsl_L1hLXHPqkc..jpg?alt=media&token=a0dd3b3b-dc94-40d9-a86f-58c9cb71a2e3',
+        id: 'aadsfhbkhlk1241',
+        title: 'Great Wall is a must go',
+        date: new Date(),
+        location: 'Paris',
+        description: 'The thing that even can be seen in the space'
       }
     ]
   },
