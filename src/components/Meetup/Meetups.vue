@@ -1,8 +1,8 @@
 <template>
   <v-container>
-    <v-layout row wrap v-for="meetup in meetups" :key="meetup.id" class="mb-2">
+    <v-layout row wrap v-for="meetup in meetups" @click="onLoadMeetup(meetup.id)" :key="meetup.id" class="mb-2">
       <v-flex xs12 sm10 md8 offset-sm1 offset-md2>
-        <v-card>
+        <v-card >
           <v-container fluid>
             <v-layout row>
               <v-flex xs5 sm4 md3>
@@ -14,13 +14,16 @@
               <v-flex xs7 sm8 md9>
                 <v-card-title primary-title>
                   <div>
-                    <h5 class="info--text mb-0">{{ meetup.title }}</h5>
-                    <div>{{ meetup.date | date }}</div>
+                    <div class="headline">{{ meetup.title }}</div>
+                    <span class="grey--text">{{ meetup.date | date }}</span>
+                    <span class="grey--text">{{ meetup.creatorId }}</span>
+                    <!--<h5 class="info&#45;&#45;text mb-0">{{ meetup.title }}</h5>-->
+                    <!--<div>{{ meetup.date | date }}</div>-->
                   </div>
                 </v-card-title>
                 <v-card-actions>
-                  <v-btn flat :to="'/meetups/' + meetup.id">
-                    <v-icon left light>arrow_forward</v-icon>
+                  <v-spacer></v-spacer>
+                  <v-btn flat class="primary--text" :to="'/meetups/' + meetup.id">
                     View Meetup
                   </v-btn>
                 </v-card-actions>
@@ -38,6 +41,11 @@
     computed: {
       meetups () {
         return this.$store.getters.loadedMeetups
+      }
+    },
+    methods: {
+      onLoadMeetup (id) {
+        this.$router.push('/meetups/' + id)
       }
     }
   }
